@@ -272,8 +272,7 @@ public class ThresholdingUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void helpMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpMenuActionPerformed
-        
-    
+
     }//GEN-LAST:event_helpMenuActionPerformed
 
     private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
@@ -300,9 +299,9 @@ public class ThresholdingUI extends javax.swing.JFrame {
     private void aboutMeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMeMenuItemActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(this,
-        "Desarrollado por Daniel Delgado Perera y Néstor Ojeda González\n"
+                "Desarrollado por Daniel Delgado Perera y Néstor Ojeda González\n"
                 + "Versión 1.0",
-        "Acerca de mí",
+                "Acerca de mí",
         JOptionPane.PLAIN_MESSAGE);
    
     }//GEN-LAST:event_aboutMeMenuItemActionPerformed
