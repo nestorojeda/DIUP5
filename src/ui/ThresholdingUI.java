@@ -11,7 +11,6 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class ThresholdingUI extends javax.swing.JFrame {
     
@@ -24,7 +23,6 @@ public class ThresholdingUI extends javax.swing.JFrame {
             @Override
             public void windowClosing(WindowEvent e) {
                 int confirmed = JOptionPane.showConfirmDialog(null, "¿Desea cerrar el programa?", "Cerrar",JOptionPane.YES_NO_OPTION);
-
                 if (confirmed == JOptionPane.YES_OPTION) {
                     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 }else{
@@ -325,7 +323,6 @@ public class ThresholdingUI extends javax.swing.JFrame {
                     warningDialog("Debe ser un número entre 0 y 255");                  
                     thresholdingMenuItemActionPerformed(evt);
                     return;
-
                 }
                 imagePanel1.thresholding(Integer.valueOf(s));
             }else{
@@ -335,11 +332,6 @@ public class ThresholdingUI extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_thresholdingMenuItemActionPerformed
-
-    
-    public static boolean isNumeric(String str) {
-        return str.matches("\\d+");  //match a number with optional '-' and decimal.
-    }
     
     private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
         if(!open){
@@ -376,13 +368,12 @@ public class ThresholdingUI extends javax.swing.JFrame {
             modifiedImagePanel.setImage(imagePanel1.getModified()); 
             this.compareJDialog.setVisible(true);
         }
-       
     }//GEN-LAST:event_compareMenuItemActionPerformed
 
     private void tipsMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipsMenuItemActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(this,
-        "Para comenzar a usar el programa, abra un archivo.\n"
+                "Para comenzar a usar el programa, abra un archivo.\n"
                 +"En el menú de edición, seleccione 'Umbralizar' para introducir el valor del umbral.\n"
                 + "Puede ver el antes y el despúes con la opción 'Comparar' o manteniendo pulsada la imagen.",
         "Consejos",
@@ -443,5 +434,9 @@ public class ThresholdingUI extends javax.swing.JFrame {
             extension = file.getName().substring(i+1);
         }  
        return extension;
+    }
+    
+    private static boolean isNumeric(String str) {
+        return str.matches("\\d+");  //match a number with optional '-' and decimal.
     }
 }
