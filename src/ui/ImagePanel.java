@@ -38,9 +38,7 @@ public class ImagePanel extends javax.swing.JPanel {
         g.drawImage(img, 0, 0,800,600, this);
     }
 
-    private int xPosition = 520;
-    private int yPosition = 10;
-    
+   
        /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
