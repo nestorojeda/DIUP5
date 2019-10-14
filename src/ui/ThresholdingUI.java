@@ -24,7 +24,7 @@ public class ThresholdingUI extends javax.swing.JFrame {
             public void windowClosing(WindowEvent e) {
                 int confirmed = JOptionPane.showConfirmDialog(null, "¿Desea cerrar el programa?", "Cerrar",JOptionPane.YES_NO_OPTION);
                 if (confirmed == JOptionPane.YES_OPTION) {
-                    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 }else{
                     setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                 }
